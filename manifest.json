@@ -2,10 +2,13 @@
   "name": "Курсы молодого бойца",
   "short_name": "Кулинария",
   "description": "Как не умереть голодным у своей же плиты",
+  "lang": "ru",
   "start_url": ".",
   "display": "standalone",
   "background_color": "#ffffff",
   "theme_color": "#ff6b6b",
+  "orientation": "any",
+  "dir":"ltr",
   "icons": [
     {
       "src": "i1.png",
