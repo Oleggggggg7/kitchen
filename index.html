@@ -12,12 +12,10 @@
     <meta name="apple-mobile-web-app-title" content="Кухня">
     <link rel="apple-touch-icon" href="i1.png">
     <script>
-         if ('serviceWorker' in navigator) {
-         navigator.serviceWorker.register('/sw.js')
-             .then(registration => console.log('ServiceWorker зарегистрирован'))
-             .catch(err => console.log('попытка регистрации ServiceWorker провалена', err));
-         }
-</script>
+        if ('serviceWorker' in navigator) {
+            navigator.serviceWorker.register('./sw.js', { scope: '/kitchen/' })
+        }
+    </script>
 </head>
 <body>
     <header>
