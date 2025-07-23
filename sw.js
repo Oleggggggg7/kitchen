@@ -1,6 +1,5 @@
 const CACHE_NAME = 'cooking-courses-v1';
 const urlsToCache = [
-  './',
   './index.html',
   './prohib.html',
   './test.html',
