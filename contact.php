@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<link rel="stylesheet" href="css/style.css">
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Курсы молодого бойца</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Как не умереть голодным у своей же плиты</h1>
+        
+    <nav>
+        <a href="index.php">Главная</a>
+        <a href="prohib.php">Запреты</a>
+        <a href="test.php">Тест</a>
+        <a href="contact.php">Контакты</a>
+    </nav>
+
+    </header>
+    
+    <main>
+        <h2>С вами не свяжутся наши специалисты</h2>
+        
+        <?php
+        // Отображение статуса
+        if (isset($_GET['status'])) {
+            echo '<div class="status-message ' . ($_GET['status'] === 'success' ? 'success' : 'error') . '">';
+            echo $_GET['status'] === 'success' ? 'Данные сохранены!' : 'Ошибка сохранения';
+            echo '</div>';
+        }
+        ?>
+        
+        <form action="save_to_db.php" method="POST">
+            <input type="text" name="name" placeholder="Ваше имя" required>
+            <input type="email" name="email" placeholder="Email" required>
+            <button type="submit">Отправить</button>
+        </form>
+
+        <!-- Блок для вывода данных из БД -->
+        <div class="db-data">
+            <h3>Последние записи:</h3>
+            <?php include 'show_contacts.php'; ?>
+        </div>
+        
+        <table>
+            <thead> <tr> <th>Проблема</th> <th>Организация</th> <th>Телефон</th> </tr> </thead>
+            <tbody>
+			    <tr>
+                    <td>Паника и стыд</td>
+                    <td>Круглосуточная психологическая помощь</td>
+                    <td>+7 (800) 200-01-22</td>
+                </tr>
+                <tr>
+                    <td>Пожар (включая кухонные возгорания)</td>
+                    <td>Пожарная служба</td>
+                    <td>101 или 112</td>
+                </tr>
+                <tr>
+                    <td>Утечка газа</td>
+                    <td>Аварийная газовая служба</td>
+                    <td>104 или 112</td>
+                </tr>
+                <tr>
+                    <td>Аварийная служба ЖКХ</td>
+                    <td>Водоканал (аварийная служба)</td>
+                    <td>+7 (495) 539-53-53</td>
+                </tr>
+                <tr>
+                    <td>Отравление или химический ожог</td>
+                    <td>Скорая помощь</td>
+                    <td>103 или 112</td>
+                </tr>
+                <tr>
+                    <td>Выпили/вдохнули бытовую химию</td>
+                    <td>Токсикологический центр</td>
+                    <td>+7 (495) 628-16-87</td>
+                </tr>
+				<tr>
+                    <td>Сломанная газовая плита или запах газа</td>
+                    <td>Аварийная газовая служба</td>
+                    <td>104 или 112</td>
+                </tr>
+            </tbody>
+        </table>
+    </main>
+    
+    <footer>
+        &copy; 2025 Kazakova
+    </footer>
+</body>
+</html>

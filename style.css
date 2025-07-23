@@ -1,0 +1,188 @@
+/* ===== Общие стили ===== */
+html, body {
+    height: 100%;           /* Для растягивания body на всю высоту */
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    color: #333;
+}
+
+body {
+    display: flex;          /* Включаем Flexbox */
+    flex-direction: column; /* Располагаем элементы в колонку */
+}
+
+/* ===== Хедер ===== */
+header {
+    background: #2c3e50;
+    color: white;
+    padding: 2rem;
+    text-align: center;
+}
+
+header h1 {
+    margin: 0;
+}
+
+nav a {
+    color: white;
+    margin: 0 10px;
+    text-decoration: none;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+/* ===== Основной контент ===== */
+main {
+    flex: 1 0 auto;       /* Растягиваем на всё свободное место */
+    padding: 20px;
+    max-width: 800px;
+    margin: 0 auto;
+    width: 100%;
+	box-sizing: border-box;
+}
+
+/* ===== Футер (всегда внизу) ===== */
+footer {
+    flex-shrink: 0;       /* Запрещаем сжиматься */
+    background: #2c3e50;
+    color: white;
+    text-align: center;
+    padding: 1rem;
+}
+
+/* ===== Дополнительные стили ===== */
+/* Для форм (страница contact.html) */
+input, button {
+    padding: 8px;
+    margin: 4px 0;
+    width: 50%;
+    max-width: 600px;
+    box-sizing: border-box;
+}
+
+button {
+    background: #3498db;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #2980b9;
+}
+
+/* Стили для таблицы контактов */
+table {
+    width: 110%; /* Шире стандартной таблицы */
+    margin: 20px auto; /* Центрирование */
+    border-collapse: separate; /* Для круглых углов */
+    border-spacing: 0;
+    border: 2px solid #2c3e50; /* Рамка */
+    border-radius: 10px; /* Круглые углы */
+    overflow: hidden; /* Скрывает острые углы у ячеек */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Тень для объема */
+}
+
+th, td {
+    padding: 12px 12px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+th {
+    background-color: #2c3e50;
+    color: white;
+    font-weight: bold;
+}
+
+tr:nth-child(even) {
+    background-color: #f8f9fa; /* Светлый фон для четных строк */
+}
+
+tr:hover {
+    background-color: #e9ecef; /* Эффект при наведении */
+}
+
+/* Стиль для экстренных номеров */
+td:nth-child(3) {
+    font-weight: 600; /* Жирный шрифт для телефонов */
+}
+
+/* Первая строка (шапка) без границы */
+thead tr th {
+    border-bottom: none;
+}
+
+/* Последняя строка без границы */
+tbody tr:last-child td {
+    border-bottom: none;
+}
+.photo-card {
+    width: 500px; 
+    max-width: 100%; 
+    box-sizing: border-box;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    transition: transform 0.3s;
+
+}
+.photo-card img {
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: contain; /* Важно: фото не обрезаются, сохраняют пропорции */
+}
+/* Стили для теста */
+#quiz-container {
+    max-width: 1600px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+}
+
+.question {
+    margin-bottom: 20px;
+}
+
+.answer-option {
+    display: block;
+    margin: 10px 0;
+    padding: 10px;
+    background-color: #fff;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.answer-option:hover {
+    background-color: #f0f0f0;
+}
+
+button {
+    margin-top: 15px;
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+.result-card {
+    max-width: 600px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    text-align: center;
+}

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<link rel="stylesheet" href="css/style.css">
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Курсы молодого бойца</title>
+    <link rel="stylesheet" href="style.css">
+	<link rel="manifest" href="/manifest.json">
+    <script>
+         if ('serviceWorker' in navigator) {
+         navigator.serviceWorker.register('/service-worker.js')
+             .then(registration => console.log('ServiceWorker зарегистрирован'))
+             .catch(err => console.log('попытка регистрации ServiceWorker провалена', err));
+         }
+</script>
+</head>
+<body>
+    <header>
+        <h1>Как не умереть голодным у своей же плиты</h1>
+<nav>
+    <a href="index.php">Главная</a>
+    <a href="prohib.php">Запреты</a>
+    <a href="test.php">Тест</a>
+    <a href="contact.php">Контакты</a>
+</nav>
+    </header>
+
+    <main>
+        <h1>Добро пожаловать!</h1>
+        <p>Если ты открыл этот сайт, то всё совсем плохо и лучше заказать доставку. А пока ждёшь, почитай статьи и пройди тест.</p>
+		<table>
+        <tr> <th>Сервис</th> <th>Что заказать</th></tr>
+        <tr>
+            <td><a href="https://www.delivery-club.ru"  target="_blank">Delivery Club</a></td>
+            <td>Ролл "Филадельфия"</td>
+        </tr>
+        <tr>
+            <td><a href="https://eda.yandex.ru" target="_blank">Яндекс.Еда</a></td>
+            <td>Хачапури по-аджарски</td>
+        </tr>
+        <tr>
+            <td><a href="https://sbermarket.ru" target="_blank">СберМаркет</a></td>
+            <td>Стейк рибай</td>
+        </tr>
+        <tr>
+            <td><a href="https://www.kfc.ru" target="_blank">KFC Delivery</a></td>
+            <td>Боксмастер</td>
+        </tr>
+        <tr>
+            <td><a href="https://samokat.ru" target="_blank">Самокат</a></td>
+            <td>Боул с лососем</td>
+        </tr>
+    </table>
+    </main>
+
+    <footer>
+        &copy; 2025 Kazakova
+    </footer>
+
+</body>
+</html>
