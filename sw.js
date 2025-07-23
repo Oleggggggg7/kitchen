@@ -27,3 +27,17 @@ self.addEventListener('fetch', (event) => {
       .then((response) => response || fetch(event.request))
   );
 });
+function fromCache(request) {
+    return caches.open(CACHE_NAME).then((cache) =>
+        cache.match(request).then((matching) =>
+            matching || Promise.reject('no-match')
+        ));
+}
+
+function update(request) {
+    return caches.open(CACHE_NAME).then((cache) =>
+        fetch(request).then((response) =>
+            cache.put(request, response)
+        )
+    );
+}
