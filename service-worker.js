@@ -1,15 +1,17 @@
-const CACHE_NAME = 'cooking-courses-v1';
+const CACHE_NAME = 'kitchen';
 const urlsToCache = [
   '/',
-  '/index.php',
-  '/prohib.php',
-  '/test.php',
-  '/contact.php',
-  '/css/style.css',
-  '/js/test.js',
-  '/images/tarakan.jpg',
-  '/images/infridge.jpg',
-  '/images/chicken.jpg'
+  '/index.html',
+  '/prohib.html',
+  '/test.html',
+  '/contact.html',
+  '/style.css',
+  '/test.js',
+  '/tarakan.jpg',
+  '/infridge.jpg',
+  '/chicken.jpg',
+  '/i1.png',
+  '/i2.png'
 ];
 
 self.addEventListener('install', (event) => {
