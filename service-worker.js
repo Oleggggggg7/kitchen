@@ -1,4 +1,4 @@
-const CACHE_NAME = 'kitchen';
+const CACHE_NAME = 'cooking-courses-v1';
 const urlsToCache = [
   '/',
   '/index.html',
